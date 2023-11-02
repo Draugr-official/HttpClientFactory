@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\System.Net.Http\HttpClientFactory.csproj" />
+    <ProjectReference Include="..\HttpClientFactory\HttpClientFactory.csproj" />
   </ItemGroup>
 
 </Project>

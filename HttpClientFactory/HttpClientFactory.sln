@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientFactory", "HttpClientFactory.csproj", "{B9D58765-B3E4-4919-981E-898D1DEE5AD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientFactory.Tests", "..\System.Net.Http.Tests\HttpClientFactory.Tests.csproj", "{58901D06-7967-40CC-8851-B3927A349764}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientFactory.Tests", "..\HttpClientFactory.Tests\HttpClientFactory.Tests.csproj", "{58901D06-7967-40CC-8851-B3927A349764}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
