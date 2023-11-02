@@ -4,6 +4,24 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>HttpClientFactory</Title>
+    <Authors>Draugr-official</Authors>
+    <Description>A library to use HttpClientFactory outside of dependency injection. HttpClientFactory solved a handful of issues that may occur when using HttpClient.</Description>
+    <PackageTags>HttpClientFactory, HttpClient, Network, Networking, Web, Http, Client</PackageTags>
+    <PackageId>Tools.$(AssemblyName)</PackageId>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReadmeFile></PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="package\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="package\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
