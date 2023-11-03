@@ -24,7 +24,22 @@ namespace System.Net.Http.Tests
         {
             HttpClient testHttpClient = HttpClientFactory.CreateClient("test");
             int testHashCode = testHttpClient.GetHashCode();
-            
+
+            HttpClient testHttpClient2 = HttpClientFactory.CreateClient("test");
+            int testHashCode2 = testHttpClient2.GetHashCode();
+
+            Assert.Equal(testHashCode, testHashCode2);
+        }
+
+        [Fact]
+        public static void TestSocketNamedHttpClientFactory()
+        {
+            HttpClient testHttpClient = HttpClientFactory.CreateClient("test", new SocketsHttpHandler
+            {
+                ConnectTimeout = TimeSpan.FromSeconds(10)
+            });
+            int testHashCode = testHttpClient.GetHashCode();
+
             HttpClient testHttpClient2 = HttpClientFactory.CreateClient("test");
             int testHashCode2 = testHttpClient2.GetHashCode();
 
