@@ -6,12 +6,28 @@
     <Nullable>enable</Nullable>
     <Title>HttpClientFactory</Title>
     <Authors>Draugr-official</Authors>
-    <Description>A library to use HttpClientFactory outside of dependency injection. HttpClientFactory solved a handful of issues that may occur when using HttpClient.</Description>
+    <Description>A library to use HttpClientFactory outside of dependency injection. HttpClientFactory solves a handful of issues that may occur when using HttpClient.</Description>
     <PackageTags>HttpClientFactory, HttpClient, Network, Networking, Web, Http, Client</PackageTags>
     <PackageId>Tools.$(AssemblyName)</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageReadmeFile></PackageReadmeFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/Draugr-official/HttpClientFactory</PackageProjectUrl>
+    <Version>1.0.2</Version>
+    <RepositoryUrl>https://github.com/Draugr-official/HttpClientFactory</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageReleaseNotes>Added a "SocketsHttpHandler" overload to CreateClient</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\package\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\package\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <None Update="package\LICENSE.txt">

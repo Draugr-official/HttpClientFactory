@@ -33,7 +33,7 @@
         }
 
         /// <summary>
-        /// Creates and registers a named HttpClient. If a client with given name already exists, this will be returned
+        /// Creates and registers a named HttpClient. If a client with given name already exists, this will be returned instead
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
@@ -48,6 +48,30 @@
             {
                 PooledConnectionLifetime = TimeSpan.FromMinutes(Settings.PooledConnectionLifetime)
             });
+
+            NamedHttpClients.Add(name, httpClient);
+
+            return httpClient;
+        }
+
+        /// <summary>
+        /// Creates and registers a named HttpClient with a SocketsHttpHandler. If a client with given name already exists, this will be returned instead
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        public static HttpClient CreateClient(string name, SocketsHttpHandler socketsHttphandler)
+        {
+            if (NamedHttpClients.ContainsKey(name))
+            {
+                return NamedHttpClients[name];
+            }
+
+            if (socketsHttphandler.PooledConnectionLifetime == Timeout.InfiniteTimeSpan)
+            {
+                socketsHttphandler.PooledConnectionLifetime = TimeSpan.FromMinutes(Settings.PooledConnectionLifetime);
+            }
+
+            HttpClient httpClient = new HttpClient(socketsHttphandler);
 
             NamedHttpClients.Add(name, httpClient);
 
